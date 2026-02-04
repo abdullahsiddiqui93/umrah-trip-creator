@@ -3,7 +3,7 @@
 import { BedrockAgentRuntimeClient, InvokeAgentCommand } from '@aws-sdk/client-bedrock-agent-runtime';
 
 const client = new BedrockAgentRuntimeClient({
-  region: process.env.AWS_REGION || 'us-west-2',
+  region: process.env.BEDROCK_REGION || 'us-west-2',
 });
 
 export async function invokeOrchestrator(userData: any): Promise<string> {
