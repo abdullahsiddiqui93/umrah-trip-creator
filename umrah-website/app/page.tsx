@@ -260,16 +260,30 @@ export default function Home() {
               </h2>
               <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6">
                 <p className="text-blue-700">
-                  🤖 <strong>AI-Powered Planning:</strong> Our agents will search
-                  real-time data and create a personalized Umrah plan for you.
+                  🤖 <strong>Demo Mode:</strong> This is a simplified demo. In production, 
+                  this would call your AgentCore orchestrator to generate a real trip plan.
+                </p>
+              </div>
+              <div className="bg-yellow-50 border-l-4 border-yellow-500 p-4 mb-6">
+                <p className="text-yellow-700">
+                  <strong>Note:</strong> API routes require server-side rendering. 
+                  To enable full functionality, deploy to Vercel or use AWS Amplify Gen 2.
                 </p>
               </div>
               <button
-                onClick={handleGenerateTrip}
+                onClick={() => {
+                  // Demo mode - just show a sample response
+                  setTripPlan({
+                    ai_response: "Demo: Your Umrah trip plan would appear here with real flight options, hotel recommendations, visa information, and detailed itinerary.",
+                    user_data: tripData,
+                    generated_at: new Date().toISOString(),
+                  });
+                  setStep(6);
+                }}
                 disabled={loading}
                 className="btn-primary mr-4"
               >
-                {loading ? '⏳ Generating...' : '🚀 Generate My Umrah Trip Plan'}
+                {loading ? '⏳ Generating...' : '🚀 Generate My Umrah Trip Plan (Demo)'}
               </button>
               <button
                 onClick={() => setStep(4)}
