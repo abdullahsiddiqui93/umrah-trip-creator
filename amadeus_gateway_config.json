@@ -1,0 +1,14 @@
+{
+  "gateway_url": "https://amadeus-travel-api-1770163078-w86qyqprty.gateway.bedrock-agentcore.us-west-2.amazonaws.com/mcp",
+  "gateway_id": "amadeus-travel-api-1770163078-w86qyqprty",
+  "region": "us-west-2",
+  "client_info": {
+    "client_id": "3hjjn9im3lbp2ej6ts60d8lbke",
+    "client_secret": "ivnc1krj47u6pp6nkh0bl8jvrtct18o7ars8ob2th5gqrcumpma",
+    "user_pool_id": "us-west-2_BRecPKvre",
+    "token_endpoint": "https://agentcore-5c57a8a2.auth.us-west-2.amazoncognito.com/oauth2/token",
+    "scope": "AmadeusGateway/invoke",
+    "domain_prefix": "agentcore-5c57a8a2"
+  },
+  "target_id": "EYFJ4BNWJV"
+}
