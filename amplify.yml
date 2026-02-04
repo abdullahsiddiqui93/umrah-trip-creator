@@ -3,10 +3,17 @@ frontend:
   phases:
     preBuild:
       commands:
+        - echo "Listing root directory..."
+        - ls -la
+        - echo "Checking if umrah-website exists..."
+        - test -d umrah-website && echo "umrah-website folder found" || echo "umrah-website folder NOT found"
+        - echo "Entering umrah-website directory..."
         - cd umrah-website
+        - echo "Installing dependencies..."
         - npm ci
     build:
       commands:
+        - echo "Building Next.js app..."
         - npm run build
   artifacts:
     baseDirectory: umrah-website
@@ -15,4 +22,3 @@ frontend:
   cache:
     paths:
       - umrah-website/node_modules/**/*
-  buildPath: /umrah-website
